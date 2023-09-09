@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="With IntelliAI, unlock the power of Artificial Intelligence.">
+        <meta name="keywords" content="IntelliAI">
+
+        <!-- IMPORT CSS MAIN -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- IMPORT FONT AWESOME -->
+        <link rel="stylesheet" type="text/css" href="fonts/css/fontawesome.min.css">
+	    <link rel="stylesheet" type="text/css" href="fonts/css/all.min.css">
+        <!-- IMPORT FAVICON -->
+        <link rel="shortcut icon" href="images/logo/SVG/IntelliAI_Logo_Icon.svg" type="image/x-icon">
+        
+        <!-- TITLE -->
+        <title>IntelliAI</title>
+    </head>
+    <body>
+
+        <!-- LOADER -->
+        <div class="loader-warpper" id="loader">
+            <div class="loader"></div>
+        </div>
+
+        <!-- MAIN -->
+        <main>
+            <!-- ASIDE LEFT -->
+            <aside class="aside-left" id="MenuMobile">
+                <ul>
+                    <!-- LOGO -->
+                    <a href="index.html">
+                        <img src="images/logo/SVG/IntelliAI_Logo_Icon.svg" alt="">
+                    </a>
+
+                    <!-- SIDEBAR ITEM -->
+                    <a href="javascript:void(0)" class="MenuMobileBtnMobile" onclick="MenuMobile()" title="Chats"><li class="far fa-comment"></li></a>
+                    
+                    <a href="javascript:void(0)" class="chatsToggleBtnMobile" onclick="chatsToggle()" accesskey="c" title="Chats (Alt+C)"><li class="far fa-comment"></li></a>
+                    <a href="javascript:void(0)" onclick="" title="Clear All Chats"><li class="far fa-trash"></li></a>
+                    <a href="javascript:void(0)" onclick="settingsToggle()" title="Settings"><li class="far fa-cog"></li></a>
+                </ul>
+                <ul>
+                    <!-- SIDEBAR ITEM -->
+                    <a href="javascript:void(0)" onclick="toggleMode()" id="farDarkToggleModeBtn" accesskey="0" title="Dark Mode (Alt+0)"><li class="far fa-moon"></li></a>
+                    <a href="javascript:void(0)" onclick="toggleMode()" id="farLightToggleModeBtn" accesskey="0" title="Light Mode (Alt+0)"><li class="far fa-sun"></li></a>
+                    
+                    <!-- SIDEBAR AVATAR -->
+                    <a href="javascript:void(0)" onclick="avatarDropdownToggle()">
+                        <img src="images/avatar/avatar-1.png" alt="">
+                    </a>
+                </ul>
+
+                <!-- AVATAR DROPDOWN TOGGLE -->
+                <div class="avatar-dropdown-toggle" id="avatarDropdownToggle">
+                    <a href="" class="avatar-dropdown-toggle-card-user">
+                        <div>
+                            <img src="images/avatar/avatar-1.png" alt="">
+                            <p>mrabiee175@gmail.com</p>
+                        </div>
+                    </a>
+                    <a href=""><li><span class="far fa-user"></span> Profile</li></a>
+                    <a href="javascript:void(0)" onclick="settingsToggle()"><li><span class="far fa-cog"></span> Settings</li></a>
+
+                    <hr>
+
+                    <a href=""><li><span class="far fa-add"></span> Add Account</li></a>
+                    <a href=""><li><span class="far fa-sign-out"></span> Log Out</li></a>
+                </div>
+            </aside>
+
+            <!-- SETTINGS TOGGLE -->
+            <section class="settings-toggle-section" id="settingsToggle">
+                <div class="settings-toggle">
+                    <div class="settings-toggle-header">
+                        <h4>Settings</h4>
+                        <li class="far fa-close" onclick="settingsToggle()"></li>
+                    </div>
+                    <div class="settings-toggle-body">
+                        <div class="settings-toggle-body-card">
+                            <div class="settings-toggle-body-card-box">
+                                <h4>Avatar</h4>
+                                <img src="images/avatar/avatar-1.png" alt="">
+                            </div>
+                            <div class="settings-toggle-body-card-box">
+                                <div class="settings-toggle-body-card-box-sub">
+                                    <h4>Font Size</h4>
+                                    <p>Adjust Font Size Of Chat Content (15-18)</p>
+                                </div>
+                                <input type="number" id="inputNumber" min="15" max="18" value="15">
+                            </div>
+                            <div class="settings-toggle-body-card-box">
+                                <h4>Theme</h4>
+                                <select name="" id="">
+                                    <option value="light">Light</option>
+                                    <option value="dark">Dark</option>
+                                </select>
+                            </div>
+                            <div class="settings-toggle-body-card-box">
+                                <h4>Language</h4>
+                                <select name="" id="">
+                                    <option value="en">English</option>
+                                    <option value="fa">Farsi</option>
+                                    <option value="fr">Français</option>
+                                    <option value="es">Español</option>
+                                    <option value="it">Italiano</option>
+                                    <option value="tr">Türkçe</option>
+                                    <option value="de">Deutsch</option>
+                                    <option value="ru">Русский</option>
+                                    <option value="jp">日本語</option>
+                                    <option value="cn">简体中文</option>
+                                </select>
+                            </div>
+                            <div class="settings-toggle-body-card-box">
+                                <div class="settings-toggle-body-card-box-sub">
+                                    <h4>Version: 20230444</h4>
+                                    <p>Found New Version: 20230999</p>
+                                </div>
+                                <div>
+                                    <a href="" class="link-default font-size-14">Update</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="settings-toggle-body-card">
+                            <div class="settings-toggle-body-card-box">
+                                <div class="settings-toggle-body-card-box-sub">
+                                    <h4>API Key</h4>
+                                    <p>Use your key to ignore access code limit</p>
+                                </div>
+                                <input type="text" placeholder="OpenAI API Key">
+                            </div>
+                            <div class="settings-toggle-body-card-box">
+                                <div class="settings-toggle-body-card-box-sub">
+                                    <h4>Account Balance</h4>
+                                    <p>Used this month $[?], subscription $[?]</p>
+                                </div>
+                                <div>
+                                    <button class="btn-default"><span class="far fa-check"></span> <span class="font-size-14">Check</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="settings-toggle-body-card">
+                            <div class="settings-toggle-body-card-box">
+                                <div class="settings-toggle-body-card-box-sub">
+                                    <h4>Disable auto-completion</h4>
+                                    <p>Input / to trigger auto-completion</p>
+                                </div>
+                                <input type="checkbox">
+                            </div>
+                            <div class="settings-toggle-body-card-box">
+                                <div class="settings-toggle-body-card-box-sub">
+                                    <h4>Prompt List</h4>
+                                    <p>0 built-in, 0 user-defined</p>
+                                </div>
+                                <div>
+                                    <button class="btn-default"><span class="far fa-edit"></span> <span class="font-size-14">Edit</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="settings-toggle-footer"></div>
+                </div>
+            </section>
+
+            <!-- ASIDE RIGHT -->
+            <aside class="aside-right">
+                <!-- CHATS TOGGLE -->
+                <div id="chatsMobile" style="display: contents;">
+                    <div class="chats-toggle" id="chatsToggle">
+                        <!-- CHATS TOGGLE HEADER -->
+                        <div class="chats-toggle-header">
+                            <h4>Chats <span class="badge badge-blue">2</span></h4>
+                            <div>
+                                <a href="javascript:void(0)" onclick="moreToggle()" title="More Options"><li class="far fa-ellipsis-h"></li></a>
+                                <a href="javascript:void(0)" class="DesktopCollapseSidebar" onclick="chatsToggle()" style="margin-left: 15px;" accesskey="c" title="Collapse Sidebar (Alt+C)"><li class="far fa-sidebar"></li></a>
+
+                                <a href="javascript:void(0)" class="MobileCollapseSidebar" onclick="MenuMobile()" style="margin-left: 15px;" title="Collapse Sidebar"><li class="far fa-sidebar"></li></a>
+                            </div>
+                        </div>
+                        <!-- CHATS TOGGLE BODY -->
+                        <div class="chats-toggle-body" id="newChatBody">
+                            <a href="javascript:void(0)">
+                                <div class="chats-toggle-new-conversation conversation-active">
+                                    <h4><li id="chatsConversationName">New Conversation</li> <span class="far fa-times-circle" onclick=""></span></h4>
+                                    <p><span>2 messages</span> <span>9/6/2023, 2:27:26 PM</span></p>
+                                </div>
+                            </a>
+                            <a href="javascript:void(0)">
+                                <div class="chats-toggle-new-conversation">
+                                    <h4>New Conversation <span class="far fa-times-circle" onclick=""></span></h4>
+                                    <p><span>0 messages</span> <span>9/6/2023, 2:04:18 PM</span></p>
+                                </div>
+                            </a>
+
+                            <!-- NEW CHAT BODY -->
+                            <a href="javascript:void(0)" id="newChatCard">
+                                <div class="chats-toggle-new-conversation" id="removeChat">
+                                    <h4>New Conversation <span class="far fa-times-circle" onclick="removeChat()"></span></h4>
+                                    <p><span>0 messages</span> <span>9/6/2023, 2:04:18 PM</span></p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- CHATS TOGGLE FOOTER -->
+                        <div class="chats-toggle-body-footer">
+                            <a href="https://github.com/Mhadi-1382/intelliai-website" title="Github"><li class="fab fa-github"></li></a>
+                            <a href="javascript:void(0)" onclick="newChat()" title="New Chat"><li class="far fa-plus-circle"></li> <span>New Chat</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MORE TOGGLE -->
+                <section class="section-more-toggle" id="moreToggle">
+                    <a href="javascript:void(0)" onclick="moreToggle()"><li class="far fa-close"></li></a>
+                    <div class="more-toggle">
+                        <a href=""><li><span class="far fa-trash"></span> Clear All Chats</li></a>
+                        <a href=""><li><span class="far fa-info-circle"></span> Helps</li></a>
+                    </div>
+                </section>
+
+                <!-- MAIN WINDOW -->
+                <div class="aside-right-main-window">
+                    <!-- NAV MAIN WINDOW -->
+                    <nav class="nav-main-window">
+                        <ul>
+                            <a href="javascript:void(0)" onclick="renameConversation()"><h3 id="conversationName">New Conversation</h3></a>
+                            <p>2 messages with IntelliAI</p>
+                        </ul>
+                        <ul>
+                            <a href="javascript:void(0)" class="MenuMobile" onclick="MenuMobile()" title="Go To Menu"><li class="far fa-arrow-left"></li></a>
+                            <a href="javascript:void(0)" onclick="renameConversation()" title="Rename Chat"><li class="far fa-pencil"></li></a>
+                            <a href="" title="Export All Messages"><li class="far fa-download"></li></a>
+                        </ul>
+                    </nav>
+                    <!-- BODY MAIN WINDOW -->
+                    <div class="body-main-window" id="chatSectionMessageItemFontSize">
+                        <div class="chat-section">
+                            <div class="chat-section-message-card chat-section-message-card-bot">
+                                <img src="images/logo/SVG/IntelliAI_Logo_Icon.svg" alt="" draggable="false">
+                                <div class="chat-section-message-item chat-section-message-item-bot">
+                                    <p>Hello! How can I assist you today?</p>
+                                </div>
+                                <div class="chat-section-message-actions"><p class="chat-section-message-menubar"><a href="">Copy</a> <a href="">Delete</a></p> 9/6/2023, 2:27:26 PM</div>
+                            </div>
+                            <div class="chat-section-message-card chat-section-message-card-user">
+                                <img src="images/avatar/avatar-1.png" alt="" draggable="false">
+                                <div class="chat-section-message-item chat-section-message-item-user">
+                                    <p>Thanks 🙏</p>
+                                </div>
+                                <div class="chat-section-message-actions"><p class="chat-section-message-menubar"><a href="">Copy</a> <a href="">Delete</a></p> 9/6/2023, 2:27:32 PM</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FOOTER MAIN WINDOW -->
+                    <div class="footer-main-window" id="footerMainWindow">
+                        <!-- FORM -->
+                        <form action="" method="post">
+                            <div class="col-1">
+                                <textarea placeholder="Ask anything..." cols="30" rows="2" autofocus ondblclick="textareaResize(this)" title="Click To Increase The Double Text Field. Alt+Plus (+) To Send." required></textarea>
+                                <button type="submit" class="far fa-arrow-up" accesskey="+" title="Alt+Plus (+) To Send"></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </aside>
+        </main>
+
+
+
+        <!-- IMPORT JS -->
+        <script src="js/app.js"></script>
+    
+    </body>
+</html>
